@@ -1,3 +1,1 @@
-import Crop from "./src";
-
-export default Crop;
+export * from './PhotoCropUtils';
