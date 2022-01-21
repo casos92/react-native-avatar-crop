@@ -9,7 +9,7 @@ export type Range = {
   min: number,
 };
 
-export function isInRange(value: number, max: number, min: number): boolean => {
+export const isInRange = (value: number, max: number, min: number): boolean => {
   return min <= value && value <= max;
 };
 
