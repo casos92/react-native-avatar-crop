@@ -86,7 +86,8 @@ export const computeScaledWidth = (
     cropAreaSize,
     minZoom,
   );
-  return maxTranslateX > 0
+  const roundedMaxTranslateX = parseFloat(maxTranslateX.toFixed(3));
+  return roundedMaxTranslateX > 0
     ? cropAreaSize.width * scale
     : (cropAreaSize.width * scale) / minZoom;
 };
@@ -103,7 +104,8 @@ export const computeScaledHeight = (
     cropAreaSize,
     minZoom,
   );
-  return maxTranslateY > 0
+  const roundedMaxTranslateY = parseFloat(maxTranslateY.toFixed(3));
+  return roundedMaxTranslateY > 0
     ? cropAreaSize.height * scale
     : (cropAreaSize.height * scale) / minZoom;
 };
